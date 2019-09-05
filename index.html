@@ -41,16 +41,35 @@ freesoul.xn--6frz82g
       }
       .b1 {
         position: absolute;
-        top: 700px;
+        top: 40vw;
         z-index: 5;
         width: 50vw;
       }
       .b2 {
         position: absolute;
-        top: 1880px;
-        left: 30vw;
+        top: 120vw;
+        left: 3vw;
         z-index: 6;
         width: 90vw;
+      }
+      @media screen and (max-width: 1200px) {
+        .b1 {
+          top:60vw;
+        }
+        .b2 {
+          top:135vw;
+        }
+      }
+      @media screen and (max-width: 415px) {
+        .f2 {
+          top: 8vh;
+        }
+        .f3 {
+          top: 15vh;
+        }
+        .f4 {
+          top: 23vh;
+        }
       }
       .f1:hover {
         transform: scale(1.05);
