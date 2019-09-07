@@ -13,10 +13,14 @@ freesoul.xn--6frz82g / display page
 
     <style>
       .w3-container {
-        bottom: -15vh;
+        bottom: -8vh;
       }
       .w3-content {
-        top: 8vh;
+        width: 80vw;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
       }
       .mySlides {
         display: none;
@@ -27,7 +31,12 @@ freesoul.xn--6frz82g / display page
       .w3-badge {
         height:13px;
         width:13px;
-        padding:25px;
+        padding:15px;
+      }
+      @media screen and (max-width: 415px) {
+        .w3-container {
+          bottom: -12vh;
+        }
       }
 
       /* @media screen and (max-width: 1030px) {
