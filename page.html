@@ -12,9 +12,34 @@ freesoul.xn--6frz82g / display page
 
 
     <style>
-      .mySlides {display:none}
-      .w3-left, .w3-right, .w3-badge {cursor:pointer}
-      .w3-badge {height:13px;width:13px;padding:0}
+      .w3-container {
+        bottom: -15vh;
+      }
+      @media screen and (max-width: 1030px) {
+        .w3-container {
+          bottom: -10vh;
+        }
+      }
+      @media screen and (max-width: 415px) {
+        .w3-container {
+          bottom: -15vh;
+        }
+      }
+      .w3-content {
+        top: 15px;
+      }
+      .mySlides {
+        display: none;
+      }
+      .w3-left, .w3-right, .w3-badge {
+        cursor:crosshair;
+      }
+      .w3-badge {
+        height:13px;
+        width:13px;
+        padding:25px;
+      }
+
     </style>
   </head>
 
