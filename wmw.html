@@ -74,6 +74,21 @@ freesoul.xn--6frz82g
       left: 0;
       padding: 10px 10px 15px 5px;
     }
+    a {
+      color: #000;
+      position: absolute;
+      background: rgba(0,0,0,0);
+      top: 5%;
+      left: 5%;
+      z-index: 1;
+      margin-top: -.75em;
+      opacity: .3;
+      user-select: none;
+      overflow: hidden;
+    }
+    a:hover {
+      opacity: 1;
+    }
     </style>
   </head>
 
@@ -112,6 +127,8 @@ freesoul.xn--6frz82g
       <span class="prev">&#9756;	</span>
       <span class="next">&#9758;	</span>
     </div>
+
+    <a href="index.html">home</a>
 
   <!-- lil bit o' JS -->
   <script>
