@@ -11,6 +11,10 @@ freesoul.xn--6frz82g
 
 
     <style>
+    body {
+      overflow: hidden;
+      font-size: 12px;
+    }
 
     .square {
       float: left;
@@ -21,7 +25,8 @@ freesoul.xn--6frz82g
       background-position:center center;
       background-repeat:no-repeat;
       background-size:cover;
-      overflow: hidden;
+      overflow: visible;
+      z-index: 1;
 
     }
     .img_1-1 {
@@ -33,27 +38,85 @@ freesoul.xn--6frz82g
     .img_1-3 {
       background-image:url('assets/imgs/wmw_3a.jpg');
     }
-
+    .text {
+      overflow: hidden;
+      position: absolute;
+      z-index: 2;
+      top: 105%;
+    }
+    button {
+      background: white;
+      border: none;
+      padding: 0px;
+      text-align: left;
+      font-size: 12px;
+      margin: 0px;
+      cursor: ;
+      text-decoration: underline;
+      font-family: inherit;
+    }
+    .home {
+      color: #0000EE;
+      position: absolute;
+      background: rgba(0,0,0,0);
+      top: 5%;
+      left: 5%;
+      z-index: 1;
+      margin-top: -.75em;
+      font-size: 12px;
+      user-select: none;
+      overflow: hidden;
+    }
+    .home:hover {
+      opacity: 1;
+    }
     </style>
   </head>
 
   <body>
+    <div class="home"><a href="index.html">home</a></div>
     <!-- row 1 -->
+    <!-- 1 -->
+      <div class="square img_1-1">
+        <div class="text">
+          <a href="#"><p>Ash Bowl</p></a>
+          <p>2013</p>
+          <p>Presented at Philadelphia Furniture Show in 2014</p>
+          <p style="color: grey;">Materials</p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Ash, found (Newtown, PA)<p>
+        </div>
+      </div>
 
-    <a href=""><div class="square img_1-1"></div></a>
-    <a href=""><div class="square img_1-2"></div></a>
-    <a href=""><div class="square img_1-3"></div></a>
+    <!-- 2 -->
+      <div class="square img_1-2">
+        <div class="text">
+          <a href="#"><p>Hall Table</p></a>
+          <p>2013</p>
+          <p>Presented at Philadelphia Furniture Show in 2014</p>
+          <p style="color: grey;">Materials</p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Steel<p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Cherry, found (Newtown, PA)<p>
+        </div>
+      </div>
+
+    <!-- 3 -->
+      <div class="square img_1-3">
+        <div class="text">
+          <a href="#"><p>Room Screens</p></a>
+          <p>2014</p>
+          <p style="color: grey;">Materials</p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Steel<p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Aluminum<p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Cherry<p>
+          <p style="font-size:10px; color: grey; margin-top:-6px;">Walnut, found (Newtown, PA)<p>
+        </div>
+      </div>
 
     <!-- row 2 -->
 
     <div class="square img_2-1"></div>
     <div class="square img_2-2"></div>
     <div class="square img_2-3"></div>
-
-
-
-
-
 
 
   <!-- lil bit o' JS -->
