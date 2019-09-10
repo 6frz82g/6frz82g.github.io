@@ -12,7 +12,6 @@ freesoul.xn--6frz82g
 
     <style>
     body {
-      overflow: hidden;
       font-size: 12px;
     }
 
@@ -27,7 +26,9 @@ freesoul.xn--6frz82g
       background-size:cover;
       overflow: visible;
       z-index: 1;
-
+    }
+    body::-webkit-scrollbar {
+      display: none;
     }
     .img_1-1 {
       background-image:url('assets/imgs/cattletech_1.jpg');
@@ -79,6 +80,12 @@ freesoul.xn--6frz82g
     .home:hover {
       opacity: 1;
     }
+    .home:visited {
+      color: #0000EE
+    }
+    a:visited {
+      color: #0000EE;
+    }
     </style>
   </head>
 
@@ -90,14 +97,16 @@ freesoul.xn--6frz82g
         <div class="text">
           <a href="#"><p>Cattle Tech</p></a>
           <p>2018-19</p>
-        </div> 
+          <p>Livestock Visibility and Electronic Containment for Raitong Organics Farm, Thailand</p>
+        </div>
       </div>
-
     <!-- 2 -->
       <div class="square img_1-2">
         <div class="text">
           <a href="#"><p>Nora The Dragon</p></a>
           <p>2018</p>
+          <p>Computer Integrated Manufacturing (CAD/CAM/Injection Molding):<br> Toy Design and Fabrication
+          <br>Concept provided by Classroom X at Local Elementary School</p>
         </div>
       </div>
     <!-- 3 -->
@@ -105,22 +114,26 @@ freesoul.xn--6frz82g
         <div class="text">
           <a href="#"><p>Rel8ball</p></a>
           <p>2017</p>
+          <p>UX/UI Design</p>
         </div>
       </div>
+
     <!-- row 2 -->
     <!-- 1 -->
       <div class="square img_2-1">
         <div class="text">
           <a href="#"><p>Formula SAE</p></a>
           <p>2017-18</p>
+          <p>Northwestern 2017 Formula SAE team at Michigan Competition</p>
         </div>
       </div>
-
     <!-- 2 -->
       <div class="square img_2-2">
         <div class="text">
           <a href="#"><p>Bionic Wrench</p></a>
           <p>2019</p>
+          <p>Manufacturing Engineering Design:
+          <br>Design for Assembly and Manufacturing Case Study for Prof. Dan Brown</p>
         </div>
       </div>
     <!-- 3 -->
@@ -128,9 +141,10 @@ freesoul.xn--6frz82g
         <div class="text">
           <a href="#"><p>Snapkey</p></a>
           <p>2016</p>
+          <p>Human-Centered Product Design:
+          <br>Accelerated Product Development Cycle</p>
         </div>
       </div>
-
 
 
   <!-- lil bit o' JS -->
