@@ -53,6 +53,44 @@ freesoul.xn--6frz82g
         right: 8vw;
         width: 38vw;
       }
+      .bgbar {
+        background-color: black;
+        position: fixed;
+        bottom: 0px;
+        z-index: 7;
+        color: black;
+        width: 100%;
+        left: 0px;
+        height: 40px;
+      }
+      .type {
+        position: fixed;
+        bottom: 0px;
+        z-index: 8;
+      }
+      .type h1 {
+        color: white;
+        -webkit-text-stroke: .5px black;
+        font-family: monospace;
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */ */
+        letter-spacing: .04em;
+        font-size: 1.13vw;
+        text-shadow: 2px 2px 2px #b8fc17;
+        animation:
+          typing 3.5s steps(30, end),
+          blink-caret .5s step-end infinite;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange }
+      }
       .b1 {
         position: absolute;
         top: 40vw;
@@ -132,6 +170,7 @@ freesoul.xn--6frz82g
         transition: all .5s;
         -webkit-filter: brightness(110%);
         filter: brightness(110%);
+        cursor: help;
       }
       .b1:hover {
         transform: scale(1.1);
@@ -198,6 +237,20 @@ freesoul.xn--6frz82g
       <a href="L_dem.html"><img src="assets/imgs/f_dem.png" class="f4"></a>
 
       <img src="assets/imgs/business_cards.png" class="d1">
+      <div class="type">
+        <h1>
+          <!-- <marquee behavior="scroll" direction="left"> -->
+          👦🏾 Freesoul El Shabazz
+          🌍 b.1997 Elmina, Ghana
+          📍 Pittsburgh PA USA / Elmina GH
+          📚 BS Manufacturing & Design Engineering
+          🏫 Northwestern University Fall 2019
+          <!-- </marquee> -->
+        </h1>
+      </div>
+      <div class="bgbar">
+        <h1> test </h1>
+      </div>
       <a href="USE.html"><img src="assets/imgs/USE.png" class="b1" title="USE (notebook): I take notes and plan projects with this notebook."></a>
       <a href="#"><img src="assets/imgs/RED.png" class="b2" title="RED (sketchbook): I sketch and paint in this one."></a>
   </body>
