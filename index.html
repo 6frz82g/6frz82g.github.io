@@ -12,6 +12,10 @@ freesoul.xn--6frz82g
 
 
     <style>
+      @font-face {
+        font-family: font1;
+        src: url(assets/f25.ttf);
+      }
       body::-webkit-scrollbar {
         display: none;
       }
@@ -61,36 +65,48 @@ freesoul.xn--6frz82g
         color: black;
         width: 100%;
         left: 0px;
-        height: 40px;
+        height: 5%;
+        opacity: .6;
       }
       .type {
         position: fixed;
-        bottom: 0px;
+        bottom: -2px;
         z-index: 8;
+        width: 100%;
       }
       .type h1 {
         color: white;
         -webkit-text-stroke: .5px black;
         font-family: monospace;
-        overflow: hidden;
-        border-right: .15em solid orange;
-        white-space: nowrap;
+        /* overflow: hidden; */
+        /* border-right: .15em solid orange; */
+        /* white-space: nowrap; */
         /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */ */
         letter-spacing: .04em;
         font-size: 1.13vw;
         text-shadow: 2px 2px 2px #b8fc17;
-        animation:
+        /* animation:
           typing 3.5s steps(30, end),
-          blink-caret .5s step-end infinite;
+          blink-caret .5s step-end infinite; */
       }
-      @keyframes typing {
+      /* @keyframes typing {
         from { width: 0 }
         to { width: 100% }
       }
       @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: orange }
-      }
+      } */
+      /* .wip {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 230%;
+        font-size: 3vw;
+        font-family: font1;
+        font-style: italic;
+        color: blue;
+      } */
       .b1 {
         position: absolute;
         top: 40vw;
@@ -239,18 +255,25 @@ freesoul.xn--6frz82g
       <img src="assets/imgs/business_cards.png" class="d1">
       <div class="type">
         <h1>
-          <!-- <marquee behavior="scroll" direction="left"> -->
-          👦🏾 Freesoul El Shabazz
-          🌍 b.1997 Elmina, Ghana
-          📍 Pittsburgh PA USA / Elmina GH
-          📚 BS Manufacturing & Design Engineering
-          🏫 Northwestern University Fall 2019
-          <!-- </marquee> -->
+          <marquee behavior="slide" direction="left" behavior="alternate">
+            👦🏾 Freesoul El Shabazz
+            🌍 b.1997 Elmina, Ghana
+            📍 Pittsburgh PA USA / Elmina GH
+            📚 BS Manufacturing & Design Engineering
+            🏫 Northwestern University Fall 2019
+          </marquee>
         </h1>
       </div>
       <div class="bgbar">
         <h1> test </h1>
       </div>
+      <!-- <div class="wip">
+        <marquee direction="down" behavior="alternate" width="100%" height="100%">
+          <marquee behavior="alternate">
+            WIP...
+          </marquee>
+        </marquee>
+      </div> -->
       <a href="USE.html"><img src="assets/imgs/USE.png" class="b1" title="USE (notebook): I take notes and plan projects with this notebook."></a>
       <a href="#"><img src="assets/imgs/RED.png" class="b2" title="RED (sketchbook): I sketch and paint in this one."></a>
   </body>
