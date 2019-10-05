@@ -73,6 +73,7 @@ freesoul.xn--6frz82g
         bottom: -2px;
         z-index: 8;
         width: 100%;
+        left: 0px;
       }
       .type h1 {
         color: white;
@@ -80,7 +81,7 @@ freesoul.xn--6frz82g
         font-family: monospace;
         /* overflow: hidden; */
         /* border-right: .15em solid orange; */
-        /* white-space: nowrap; */
+        white-space: nowrap;
         /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */ */
         letter-spacing: .04em;
         font-size: 1.13vw;
@@ -137,6 +138,9 @@ freesoul.xn--6frz82g
         }
         .f4 {
           top: 23vh;
+        }
+        .type h1 {
+          font-size: 4vw;
         }
       }
       @media screen and (min-width: 768px) {
@@ -255,7 +259,7 @@ freesoul.xn--6frz82g
       <img src="assets/imgs/business_cards.png" class="d1">
       <div class="type">
         <h1>
-          <marquee behavior="slide" direction="left" behavior="alternate">
+          <marquee behavior="scroll" direction="left">
             👦🏾 Freesoul El Shabazz
             🌍 b.1997 Elmina, Ghana
             📍 Pittsburgh PA USA / Elmina GH
