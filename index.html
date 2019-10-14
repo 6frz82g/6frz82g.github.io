@@ -84,7 +84,8 @@ freesoul.xn--6frz82g
         white-space: nowrap;
         /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */ */
         letter-spacing: .04em;
-        font-size: 1.13vw;
+        /* font-size: 1.13vw; */
+        font-size: 1.13em;
         text-shadow: 2px 2px 2px #b8fc17;
         /* animation:
           typing 3.5s steps(30, end),
@@ -128,6 +129,10 @@ freesoul.xn--6frz82g
         .b2 {
           top:135vw;
         }
+        .type h1 {
+          font-size: 2em;
+          padding-bottom: 5px;
+        }
       }
       @media screen and (max-width: 415px) {
         .f2 {
@@ -140,12 +145,16 @@ freesoul.xn--6frz82g
           top: 23vh;
         }
         .type h1 {
-          font-size: 4vw;
+          font-size: 1em;
+          padding-bottom: 3px;
         }
       }
       @media screen and (min-width: 768px) {
         .d1 {
           top: 65vw;
+        }
+        .type h1 {
+          font-size: 1.5em;
         }
       }
       @media screen and (min-width: 1425px) {
@@ -157,6 +166,15 @@ freesoul.xn--6frz82g
         .d1 {
           top: 60vw;
         }
+        .type h1 {
+          font-size: 1em;
+          padding-bottom: 3px;
+        }
+      }
+      @media screen and (max-width:320px) {
+          .type {
+            bottom: -6px;
+          }
       }
       .f1:hover {
         transform: scale(1.05);
@@ -268,9 +286,9 @@ freesoul.xn--6frz82g
           </marquee>
         </h1>
       </div>
-      <div class="bgbar">
+      <!-- <div class="bgbar">
         <h1> test </h1>
-      </div>
+      </div> -->
       <!-- <div class="wip">
         <marquee direction="down" behavior="alternate" width="100%" height="100%">
           <marquee behavior="alternate">
