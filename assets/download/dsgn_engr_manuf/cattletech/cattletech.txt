@@ -1,3 +1,0 @@
-CattleTech 2018-2019
-
-For my capstone design project I was assigned to work with a team that was tasked with developing a solution to increase cattle visibility as well as a develop a low cost, accessible and easily repairable system for tetherless containment of cattle. The project was presented by our client Bryan Hugill of Raitong Organics Farm in Sisaket Thailand. My role on the team was Hardware lead as well as being a part of the software and visibility design teams. This project is schedule to resume winter 2019 with a new team. Our research, design propositions, design summary and initial testing can be found in the presentation and final pdf in this folder.  

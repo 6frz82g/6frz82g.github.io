@@ -1,7 +1,0 @@
-Bionic Wrench 2019
-
-The Bionic Wrench was developed by Loggerhead Tools/Prof. Dan Brown whom I studied under. The case study focuses on the design for assembly and design for manufacturing processes. Our task was to create assembly jigs and methodology that could theoretically be used in Prof. Browns factories without any knowledge as to how his system works. 
-
-The unique situation and particular challenge of pursuing a design direction adjacent to an existing product required thorough teamwork, heavy leaning into rapid prototyping techniques and expert consultation. The process opened my eyes to the complexities of real-world manufacturing and excited my intuition for working within an intersection of design constraints. 
-
-In the end our team was very successful, developing a jig and system capable of completely 8 wrenches in 20 minutes, just shy of the record for the class. The full report is available in the folder.   
