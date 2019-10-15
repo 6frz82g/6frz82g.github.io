@@ -1,3 +1,7 @@
 Bionic Wrench
 
-The Bionic Wrench project was a case study for The Bionic Wrench developed by Loggerhead Tools/Prof. Dan Brown whom I studied under. The study focuses on design for assembly and design for manufacturing processes. Pursuing a design direction adjacent to an existing product, that has it's own sets of constraints allowed for my development of a particular intution and methodology--teamwork being central. 
+The Bionic Wrench project was a case study of The Bionic Wrench developed by Loggerhead Tools/Prof. Dan Brown whom I studied under. The study focuses on the design for assembly and design for manufacturing processes. Our task was to recreate the assembly jigs and methodology used in Prof. Browns factories without any knowledge as to how his system works. 
+
+The unique situation and particular challenge of pursuing a design direction adjacent to an existing product required thorough teamwork, heavy leaning into rapid prototyping techniques and expert consultation. The process opened my eyes to the complexities of real-world manufacturing and excited my intuition for working within an intersection of design constraints. 
+
+In the end our team was very successful, developing a jig and system capable of completely 8 wrenches in 20 minutes, just shy of the record for the class.  
