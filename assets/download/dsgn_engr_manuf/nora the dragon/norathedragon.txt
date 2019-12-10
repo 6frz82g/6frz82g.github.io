@@ -1,3 +1,0 @@
-Nora the Dragon 2018
-
-Part of our unofficial manufacturing capstone is a course that focuses on computer integrated manufacturing, specifically with application to the injection molding process. Our project for the course was to interpret a sketch provided by a local gradeschooler and to use our CAD skills to brings said sketch to life as a toy. In order to produce the toy we furthered our CAM skills and used Haas routers to mill molds. Using the department injection molding machine we produced a run of the product. Images along with the final report can be found in the folder.   

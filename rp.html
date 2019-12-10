@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+freesoul.id
+-->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <style>
+      @font-face {
+        font-family: font1;
+        src: url(assets/f25.ttf);
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        position: relative;
+        width: 50%;
+        left: 25%;
+      }
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: white;
+      }
+      .container:hover .overlay {
+        opacity: .9;
+      }
+      .text {
+        color: black;
+        font-size: 1.2em;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+      }
+      a:visited {
+        color: blue;
+      }
+      @media screen and (max-width:1024px) {
+        .container {
+          width: 100%;
+          left: 0px;
+        }
+        .text {
+          font-size: 1.4em;
+        }
+      }
+      @media screen and (max-height:823px) {
+        .text {
+          font-size: .55em;
+        }
+      }
+      .home {
+        color: #0000EE;
+        position: fixed;
+        background: rgba(0,0,0,0);
+        top: 1%;
+        left: .5%;
+        z-index: 10;
+        font-size: 12px;
+        user-select: none;
+        overflow: hidden;
+      }
+      .home:hover {
+        transform: scale(1.1);
+        transition: all .5s;
+        -webkit-filter: brightness(110%);
+        filter: brightness(150%);
+      }
+      .home:visited {
+        color: #0000EE
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home"><a href="sws.html"><img src="assets/imgs/back.png" width="20px"></a></div>
+
+    <div class="container">
+      <img src="assets/imgs/ssmu.png" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Surface Stomper</b> Dec. 2018<br><br>
+          Exercise in Shoe construction<br>
+          I adapted some old Y3 trainers and a pair of boot coverings I found at Village discount in Chicago. There's not much else to it, I've seen similar designs new and old.
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/kcase.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Kaneda Case (iphone 5)</b> 2018<br><br>
+          Exercise in Product Design, Product Adaption, rapid prototyping.
+          Inspired by Kaneda's insane transformation in the 1988 film Akira.
+          <a href="assets/dl/kcase.zip" title="download" download>kcase.zip</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/bedouin_1.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Bedouin</b> 2016<br><br>
+          In the summer after highschool my friends and I produced, performed and creative directed a project for the group 8x2 (we were members of the group).
+          Bedouin is our story of boredom and freedom. Being 17 and 18, we imagined an epic comglomeration of our own experiences and dreams, as well as those of our peers.
+          The sonic subjects capture a wide range of experiences, from an entire song about Hennessy to Police brutality and profiling, to the feeling when your friends beat a case,
+          and of course new love and heartbreak.
+          <a href="assets/dl/BEDOUIN.zip" title="download" download>bedouin.zip</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/ey3.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Empathetic Youth</b> 2016-17<br><br>
+          Empathetic Youth was my first solo deep dive into text, and screen printing on cloths, as well as natural dyes.
+          I spent several months documenting relationships (film/text) and wanted to capture the spirit of the friends at the time.
+          Sadly a majority of the footage was lost when a friend of mine lost my hard drive. The project culimated with a series of patches that i sent to my friends across the country.
+          The themes; empathy, trust, danger, love, worry.
+          <a href="assets/dl/empatheticyouth.zip" title="download" download>ey.zip</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/af1_2.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>AF1 Adaption</b> Jan. 2017<br><br>
+          Simple exploration into utility and symmetry.
+          The world has been customizing the AF1 for years-- this exercise was completed several months before the massive wave of work inspired by Virgil Abloh and Nike Campaigns.
+          <a href="assets/dl/AF1jan2017.zip" title="download" download>af1jan2017.zip</a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>
