@@ -6,6 +6,7 @@ freesoul.id
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
@@ -15,21 +16,16 @@ freesoul.id
       }
       body {
         font-family: Arial, sans-serif;
+        background-color: #003366;
       }
       .text {
         position: relative;
         margin: 10%;
-
-      }
-      a:visited {
-        color: blue;
-      }
-      a:hover {
-        background-color: yellow;
+        color: white;
       }
       .dropbtn {
-        background-color: white;
-        color: blue;
+        background-color: #003366;
+        color: white;
         text-decoration: underline;
         font-size: 1em;
         border: none;
@@ -69,7 +65,7 @@ freesoul.id
         display: none;
       }
       .dropbtn:hover {
-        background-color: yellow;
+        background-color: green;
       }
       .dropdown:hover .dropstuff, .dropdown:focus .dropstuff, .dropdown:active .dropstuff {
         display: block;
@@ -77,24 +73,32 @@ freesoul.id
       .dropdown:hover .dropstuff3, .dropdown:focus .dropstuff3, .dropdown:active .dropstuff {
         display: block;
       }
+      a:visited {
+        color: white;
+      }
+      a:hover {
+        background-color: green;
+      }
+      button:hover {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
     <div class="text">
-    <p>
       <b>Freesoul-Kofi El Shabazz</b>
-      <br><br>
-      b.1997 Elmina, Ghana <br>
-      BS Manufacturing & Design Engineering from Northwestern University (fall 2019) <br>
-      Currently in <a href="https://goo.gl/maps/yz5kRN1PVUxkFmDH6" target="_blank">Cape Coast</a> <br>
-      Visiting family and travelling.
       <br>
       <br>
-      "...what definitely matters is that we know each other" <br>
-      <div class="dropdown">
-        <b>
-        Freesoul-Kofi is a Brother, Explorer, Student and <button class="dropbtn"><b>Generator</b></button>
-      </b>
+      b.1997 Elmina, Ghana
+      <br>
+      BS Manufacturing & Design Engineering from Northwestern University (fall 2019)
+      <br>
+      <br>
+      "...what definitely matters is that we know each other"
+      <br>
+      <br>
+      <!-- <div class="dropdown">
+           Freesoul-Kofi is a Brother, Explorer, Student and <button class="dropbtn">Generator</button>
           <div class="dropstuff">
             <i>
               A Generator is a person who, through observation, research, and experimentation, develops specific
@@ -105,34 +109,75 @@ freesoul.id
               Activity Sectors: Art, Design, Engineering, Architecture, Sociopolitical <br>
             </i>
           </div>
-      </div>
-      <br><br>
-      <div class="dropdown">
+      </div> -->
+      Freesoul-Kofi is a Brother, Explorer, Student and
+      <button onclick="pageRip('one')" class="dropbtn">Generator</button>
+        <div id="one" class="w3-hide">
+          <i><br>
+            A Generator is a person who, through observation, research, and
+            experimentation, develops specific processes by which a general
+            problem can be solved, or general need can be met. To practice
+            Generation means to give impetus to the creation and arrangment of
+            things, events or spaces that continually resolve the forces of
+            any given system of pattern-relationships.
+            <br>
+            <br>
+            Activity Sectors: Art, Design, Engineering, Architecture,
+            Sociopolitical
+          </i>
+        </div>
+      <!-- <div class="dropdown">
         Read my <button class="dropbtn">Bio</button>
-      <div class="dropstuff">
-        <i>
-       "Yo, My name is Freesoul-Kofi. I'm a Design Engineer, Conceptual Artist and
-       Creative Director actively pursuing work in regenerative and restorative
-       design. From products and architecture to culture and history, my
-       research and work focuses on exploring and recreating our relationship
-       with nature in order to use all we have towards generating wholeness of
-       experience for all."
-     </i>
-     </div>
-      </div>
+        <div class="dropstuff">
+          <i>
+             "Yo, My name is Freesoul-Kofi. I'm a Design Engineer, Conceptual Artist and
+             Creative Director actively pursuing work in regenerative and restorative
+             design. From products and architecture to culture and history, my
+             research and work focuses on exploring and recreating our relationship
+             with nature in order to use all we have towards generating wholeness of
+             experience for all."
+          </i>
+        </div>
+      </div> -->
       <br>
-      this is my most recent <a href="assets/resume.pdf" target="_blank">resume</a><br>
-      check out some <a href="sws.html" target="_blank">selected works</a><br>
-      some <a href="rp.html" target="_blank">random projects</a><br>
-      <div class="dropdown">
+      Read my
+      <button onclick="pageRip('two')" class="dropbtn">Bio</button>
+        <div id="two" class="w3-hide">
+          <i><br>
+            "Hey, My name is Freesoul-Kofi. I'm a Design Engineer, Conceptual Artist and
+            Creative Director actively pursuing work in regenerative and restorative
+            design. From products and architecture to culture and history, my
+            research and work focuses on exploring and recreating our relationship
+            with nature in order to use all we have towards generating wholeness of
+            experience for all."
+          </i>
+        </div>
+      <br>
+      this is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>
+      <br>
+      check out some <a href="sws.html" target="_blank">selected works</a>
+      <br>
+      some <a href="rp.html" target="_blank">random projects</a>
+      <br>
+      <!-- <div class="dropdown">
         and work in <button class="dropbtn">press</button>
           <div class="dropstuff">
             <a href="#" target="_blank">Cattle Tech</a><br>
             <a href="https://blogs.sw.siemens.com/nx-design/northwestern-engineering-students-bring-elementary-kids-drawings-to-life/" target="_blank">NX Siemens NU Design Contest</a><br>
             <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
           </div>
-      </div><br>
-      <div class="dropdown">
+      </div> -->
+      and work in
+      <button onclick="pageRip('three')" class="dropbtn">press</button>
+        <div id="three" class="w3-hide">
+          <i><br>
+          <a href="#" target="_blank">Cattle Tech</a><br>
+          <a href="https://blogs.sw.siemens.com/nx-design/northwestern-engineering-students-bring-elementary-kids-drawings-to-life/" target="_blank">NX Siemens NU Design Contest</a><br>
+          <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
+        </i>
+        </div>
+      <br>
+      <!-- <div class="dropdown">
         also, some of my favorite <button class="dropbtn">reads</button>
           <div class="dropstuff">
             <i>
@@ -143,15 +188,36 @@ freesoul.id
               <a href="https://g.co/kgs/JUUtpA" target="_blank">D. Millman - Way of the Peaceful Warrior</a><br>
             </i>
           </div>
-      </div><br>
+      </div> -->
+      also, some of my favorite
+      <button onclick="pageRip('four')" class="dropbtn">reads</button>
+        <div id="four" class="w3-hide">
+          <i><br>
+            <a href="https://g.co/kgs/Y72G3r" target="_blank">G. Agamben - Profanations</a><br>
+            <a href="https://g.co/kgs/F7Syf4" target="_blank">C. Alexander - The Timeless Way of Building</a><br>
+            <a href="https://g.co/kgs/cazPpt" target="_blank">R. Benavides - Raising the Curtain</a> *** if you own a copy of this book please contact me.<br>
+            <a href="https://g.co/kgs/mgRFgR" target="_blank">K. Gibran - Tears and Laughter</a> <br>
+            <a href="https://g.co/kgs/JUUtpA" target="_blank">D. Millman - Way of the Peaceful Warrior</a><br>
+          </i>
+        </div>
+      <br>
       <br>
       dm me on <a href="https://www.instagram.com/freesoul.id" target="_blank">Instagram</a>
       or <a href="https://www.linkedin.com/in/freesoul-kofi-e-9a778b93/" target="_blank">LinkedIn</a>
       or send me an email: <a href="mailto:yes@freesoul.id?subject=feedback">yes@freesoul.id</a><br>
-    </p>
     </div>
     <script>
       document.addEventListener("touchstart", function() {}, true);
+    </script>
+    <script>
+    function pageRip(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
     </script>
 
   </body>
