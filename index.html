@@ -21,10 +21,11 @@ freesoul.id
         font-family: Arial, sans-serif;
         background: rgba(0, 0, 0, 0) linear-gradient(180deg, #1a4bb3, #50514F, #1a4bb3) repeat scroll 0 0;
         background-size: 400% 400%;
+        font-size: 1.2em;
 
-        -webkit-animation: AnimationName 100s ease infinite;
-        -moz-animation: AnimationName 100s ease infinite;
-        animation: AnimationName 100s ease infinite;
+        -webkit-animation: AnimationName 80s ease infinite;
+        -moz-animation: AnimationName 80s ease infinite;
+        animation: AnimationName 80s ease infinite;
       }
       @-webkit-keyframes AnimationName {
         0%{background-position:50% 0%}
@@ -110,18 +111,20 @@ freesoul.id
         transition: max-height 0.5s ease-out;
       }
       #hs {
-        height: 30vh;
-        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😜</text></svg>") 16 0,auto; /*emojicursor.app*/
+        background-image: url('assets/imgs/hsa2.jpg');
+        background-size: 100% 100%;
+        height:250px;
+        width:250px
       }
       #hs:hover {
-        background-image: url(assets/imgs/hsb.jpg);
+        background-image: url('assets/imgs/hsb.jpg');
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😜</text></svg>") 16 0,auto; /*emojicursor.app*/
       }
     </style>
   </head>
   <body>
     <div class="text">
       <b>Freesoul-Kofi El Shabazz</b>
-      <br>
       <br>
       b.1997 Elmina, Ghana
       <br>
@@ -189,13 +192,15 @@ freesoul.id
       See my
       <button class="dropbtn">Face</button>
         <div class="panel">
-          <img id="hs" src="assets/imgs/hsa2.jpg" onmouseover="hover(this);" onmouseout="unhover(this);" />
+          <div id="hs">
+
+          </div>
         </div>
-      This is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>
+      This is my most recent <a href="assets/resume.pdf" target="_blank">resume ↗</a>
       <br>
-      Check out some <a href="sws.html" target="_blank">selected works</a>
+      Check out some <a href="sws.html" target="_blank">selected works ↗</a>
       <br>
-      Some <a href="rp.html" target="_blank">random projects</a>
+      Some <a href="rp.html" target="_blank">random projects ↗</a>
       <br>
       <!-- <div class="dropdown">
         and work in <button class="dropbtn">press</button>
@@ -238,8 +243,8 @@ freesoul.id
           </i>
         </div>
       <br>
-      dm me on <a href="https://www.instagram.com/freesoul.id" target="_blank">Instagram</a>
-      or <a href="https://www.linkedin.com/in/freesoul-kofi-e-9a778b93/" target="_blank">LinkedIn</a>
+      dm me on <a href="https://www.instagram.com/freesoul.id" target="_blank">Instagram ↗</a>
+      or <a href="https://www.linkedin.com/in/freesoul-kofi-e-9a778b93/" target="_blank">LinkedIn ↗</a>
       or send me an email: <a href="mailto:yes@freesoul.id?subject=feedback">yes@freesoul.id</a><br>
     </div>
     <script>
@@ -260,14 +265,6 @@ freesoul.id
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
       });
-    }
-    </script>
-    <script>
-    function hover(element) {
-      element.setAttribute('src', 'assets/imgs/hsb.jpg');
-    }
-    function unhover(element) {
-      element.setAttribute('src', 'assets/imgs/hsa2.jpg');
     }
     </script>
 
