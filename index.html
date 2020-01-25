@@ -111,11 +111,10 @@ freesoul.id
       }
       #hs {
         height: 30vh;
-        transition: 0.8s;
         cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😜</text></svg>") 16 0,auto; /*emojicursor.app*/
       }
       #hs:hover {
-        content: url(assets/imgs/hsb.jpg);
+        background-image: url(assets/imgs/hsb.jpg);
       }
     </style>
   </head>
@@ -190,7 +189,7 @@ freesoul.id
       See my
       <button class="dropbtn">Face</button>
         <div class="panel">
-          <img src="assets/imgs/hsa2.jpg" id="hs">
+          <img id="hs" src="assets/imgs/hsa2.jpg" onmouseover="hover(this);" onmouseout="unhover(this);" />
         </div>
       This is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>
       <br>
@@ -262,7 +261,15 @@ freesoul.id
         }
       });
     }
-  </script>
+    </script>
+    <script>
+    function hover(element) {
+      element.setAttribute('src', 'assets/imgs/hsb.jpg');
+    }
+    function unhover(element) {
+      element.setAttribute('src', 'assets/imgs/hsa2.jpg');
+    }
+    </script>
 
   </body>
   </html>
