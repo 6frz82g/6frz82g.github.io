@@ -10,28 +10,52 @@ freesoul.id
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
+    <!-- <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
     <style>
       body::-webkit-scrollbar {
         display: none;
       }
       body {
         font-family: Arial, sans-serif;
-        background-color: #003366;
+        background: rgba(0, 0, 0, 0) linear-gradient(180deg, #1a4bb3, #50514F, #1a4bb3) repeat scroll 0 0;
+        background-size: 400% 400%;
+
+        -webkit-animation: AnimationName 100s ease infinite;
+        -moz-animation: AnimationName 100s ease infinite;
+        animation: AnimationName 100s ease infinite;
+      }
+      @-webkit-keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+      }
+      @-moz-keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+      }
+      @keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
       }
       .text {
         position: relative;
         margin: 10%;
-        color: white;
+        color: #dedede;
       }
       .dropbtn {
-        background-color: #003366;
-        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        color: #dedede;
         text-decoration: underline;
         font-size: 1em;
         border: none;
         position: relative;
         padding: 0px;
         margin: 0px;
+        transition: 0.5s;
       }
       .dropdown {
         position: relative;
@@ -65,7 +89,7 @@ freesoul.id
         display: none;
       }
       .dropbtn:hover {
-        background-color: green;
+        background-color: #119DA4 ;
       }
       .dropdown:hover .dropstuff, .dropdown:focus .dropstuff, .dropdown:active .dropstuff {
         display: block;
@@ -74,13 +98,24 @@ freesoul.id
         display: block;
       }
       a:visited {
-        color: white;
+        color: #dedede;
       }
       a:hover {
-        background-color: green;
+        background-color: #119DA4;
+        transition: 0.5s;
       }
-      button:hover {
-        background-color: green;
+      .panel, #one, #two, #three, #four {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+      #hs {
+        height: 30vh;
+        transition: 0.8s;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😜</text></svg>") 16 0,auto; /*emojicursor.app*/
+      }
+      #hs:hover {
+        content: url(assets/imgs/hsb.jpg);
       }
     </style>
   </head>
@@ -111,8 +146,8 @@ freesoul.id
           </div>
       </div> -->
       Freesoul-Kofi is a Brother, Explorer, Student and
-      <button onclick="pageRip('one')" class="dropbtn">Generator</button>
-        <div id="one" class="w3-hide">
+      <button class="dropbtn">Generator</button>
+        <div class="panel">
           <i><br>
             A Generator is a person who, through observation, research, and
             experimentation, develops specific processes by which a general
@@ -141,23 +176,27 @@ freesoul.id
       </div> -->
       <br>
       Read my
-      <button onclick="pageRip('two')" class="dropbtn">Bio</button>
-        <div id="two" class="w3-hide">
+      <button class="dropbtn">Bio</button>
+        <div class="panel">
           <i><br>
-            "Hey, My name is Freesoul-Kofi. I'm a Design Engineer, Conceptual Artist and
+            "Hey, My name is Freesoul-Kofi. I'm a Design Engineer, Experimental Sculptor and
             Creative Director actively pursuing work in regenerative and restorative
             design. From products and architecture to culture and history, my
             research and work focuses on exploring and recreating our relationship
             with nature in order to use all we have towards generating wholeness of
             experience for all."
-          </i>
+          </i><br>&nbsp;
         </div>
+      See my
+      <button class="dropbtn">Face</button>
+        <div class="panel">
+          <img src="assets/imgs/hsa2.jpg" id="hs">
+        </div>
+      This is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>
       <br>
-      this is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>
+      Check out some <a href="sws.html" target="_blank">selected works</a>
       <br>
-      check out some <a href="sws.html" target="_blank">selected works</a>
-      <br>
-      some <a href="rp.html" target="_blank">random projects</a>
+      Some <a href="rp.html" target="_blank">random projects</a>
       <br>
       <!-- <div class="dropdown">
         and work in <button class="dropbtn">press</button>
@@ -167,16 +206,15 @@ freesoul.id
             <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
           </div>
       </div> -->
-      and work in
-      <button onclick="pageRip('three')" class="dropbtn">press</button>
-        <div id="three" class="w3-hide">
+      And work in
+      <button class="dropbtn">press</button>
+        <div class="panel">
           <i><br>
           <a href="#" target="_blank">Cattle Tech</a><br>
           <a href="https://blogs.sw.siemens.com/nx-design/northwestern-engineering-students-bring-elementary-kids-drawings-to-life/" target="_blank">NX Siemens NU Design Contest</a><br>
           <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
-        </i>
+        </i><br>
         </div>
-      <br>
       <!-- <div class="dropdown">
         also, some of my favorite <button class="dropbtn">reads</button>
           <div class="dropstuff">
@@ -189,9 +227,9 @@ freesoul.id
             </i>
           </div>
       </div> -->
-      also, some of my favorite
-      <button onclick="pageRip('four')" class="dropbtn">reads</button>
-        <div id="four" class="w3-hide">
+      Also, some of my favorite
+      <button class="dropbtn">reads</button>
+        <div class="panel">
           <i><br>
             <a href="https://g.co/kgs/Y72G3r" target="_blank">G. Agamben - Profanations</a><br>
             <a href="https://g.co/kgs/F7Syf4" target="_blank">C. Alexander - The Timeless Way of Building</a><br>
@@ -201,7 +239,6 @@ freesoul.id
           </i>
         </div>
       <br>
-      <br>
       dm me on <a href="https://www.instagram.com/freesoul.id" target="_blank">Instagram</a>
       or <a href="https://www.linkedin.com/in/freesoul-kofi-e-9a778b93/" target="_blank">LinkedIn</a>
       or send me an email: <a href="mailto:yes@freesoul.id?subject=feedback">yes@freesoul.id</a><br>
@@ -209,16 +246,23 @@ freesoul.id
     <script>
       document.addEventListener("touchstart", function() {}, true);
     </script>
+
     <script>
-    function pageRip(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
-      }
+    var acc = document.getElementsByClassName("dropbtn");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
     }
-    </script>
+  </script>
 
   </body>
   </html>
