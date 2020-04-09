@@ -13,21 +13,23 @@ freesoul.id
     <!-- <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <script src="bootstrap.min.js"></script>
     <script src="jquery.min.js"></script>
+    <script src="granim.min.js"></script>
     <style>
       body::-webkit-scrollbar {
         display: none;
       }
       body {
         font-family: Arial, sans-serif;
-        background: rgba(0, 0, 0, 0) linear-gradient(180deg, #1a4bb3, #6bbf17, #1a4bb3) repeat scroll 0 0;
+        font-size: 1.2em;
+        /* background: rgba(0, 0, 0, 0) linear-gradient(180deg, #1a4bb3, #6bbf17, #1a4bb3) repeat scroll 0 0;
         background-size: 400% 400%;
         font-size: 1.2em;
 
         -webkit-animation: AnimationName 86s ease infinite;
         -moz-animation: AnimationName 86s ease infinite;
-        animation: AnimationName 86s ease infinite;
+        animation: AnimationName 86s ease infinite; */
       }
-      @-webkit-keyframes AnimationName {
+      /* @-webkit-keyframes AnimationName {
         0%{background-position:50% 0%}
         50%{background-position:50% 100%}
         100%{background-position:50% 0%}
@@ -41,6 +43,16 @@ freesoul.id
         0%{background-position:50% 0%}
         50%{background-position:50% 100%}
         100%{background-position:50% 0%}
+      } */
+      #canvas-basic {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
       }
       .text {
         position: relative;
@@ -133,8 +145,9 @@ freesoul.id
     </style>
   </head>
   <body>
+    <canvas id="canvas-basic"></canvas>
     <div class="text">
-      <b>Freesoul-Kofi El Shabazz-Thompson ©2020</b>
+      <b>Freesoul-Kofi El Shabazz-Thompson</b>
       <br>
       b.1997 Elmina, Ghana
       <br>
@@ -143,7 +156,7 @@ freesoul.id
       <br>
       "...what definitely matters is that we know each other"
       <br>
-      <br>
+
       <!-- <div class="dropdown">
            Freesoul-Kofi is a Brother, Explorer, Student and <button class="dropbtn">Generator</button>
           <div class="dropstuff">
@@ -157,7 +170,8 @@ freesoul.id
             </i>
           </div>
       </div> -->
-      Freesoul-Kofi is a Brother, Explorer, Student and
+
+      <!-- Freesoul-Kofi is a Brother, Explorer, Student and
       <button class="dropbtn">Generator</button>
         <div class="panel">
           <i><br>
@@ -172,7 +186,8 @@ freesoul.id
             Activity Sectors: Art, Design, Engineering, Architecture,
             Sociopolitical
           </i>
-        </div>
+        </div> -->
+
       <!-- <div class="dropdown">
         Read my <button class="dropbtn">Bio</button>
         <div class="dropstuff">
@@ -256,6 +271,8 @@ freesoul.id
       <a href="https://www.linkedin.com/in/freesoul-kofi" target="_blank">LinkedIn ↗</a><br>
       <a href="https://www.upwork.com/o/profiles/users/~0136a529e3e4df5dc7/">UpWork ↗</a><br>
       or send me an email: <a href="mailto:yes@freesoul.id?subject=feedback">yes@freesoul.id</a><br>
+      <br>
+      <i>All Content © Freesoul-Kofi El Shabazz-Thompson 2020</i>
     </div>
     <script>
       document.addEventListener("touchstart", function() {}, true);
@@ -276,6 +293,21 @@ freesoul.id
         }
       });
     }
+    </script>
+    <script>
+    var granimInstance = new Granim({
+      element: '#canvas-basic',
+      direction: 'left-right',
+      isPausedWhenNotInView: true,
+      states : {
+        "default-state": {
+          gradients: [
+            ['#1a4bb3', '#6bbf17'],
+            ['#00F260', '#0575E6']
+          ]
+        }
+      }
+    });
     </script>
 
   </body>
