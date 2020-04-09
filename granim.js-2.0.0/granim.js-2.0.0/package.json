@@ -28,7 +28,7 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^13.0.1",
-    "codecov": "^1.0.1",
+    "codecov": "^3.6.5",
     "gulp": "^4.0.0",
     "gulp-copy": "0.0.2",
     "gulp-eslint": "^5.0.0",
