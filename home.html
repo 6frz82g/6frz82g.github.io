@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--
+freesoul.id
+-->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/imgs/flag1to1.png">
+    <link rel="stylesheet" href="w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <!-- <link href="bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="granim.min.js"></script>
+    <style>
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 1.5em;
+        /* background: rgba(0, 0, 0, 0) linear-gradient(180deg, #1a4bb3, #6bbf17, #1a4bb3) repeat scroll 0 0;
+        background-size: 400% 400%;
+        font-size: 1.2em;
+
+        -webkit-animation: AnimationName 86s ease infinite;
+        -moz-animation: AnimationName 86s ease infinite;
+        animation: AnimationName 86s ease infinite; */
+      }
+      /* @-webkit-keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+      }
+      @-moz-keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+      }
+      @keyframes AnimationName {
+        0%{background-position:50% 0%}
+        50%{background-position:50% 100%}
+        100%{background-position:50% 0%}
+      } */
+      #canvas-basic {
+        position: fixed;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .text {
+        position: relative;
+        margin: 10%;
+        color: #dedede;
+        /* text-shadow: 0px 0px 3px white; */
+      }
+      .dropbtn {
+        background-color: rgba(0, 0, 0, 0);
+        color: #dedede;
+        text-decoration: underline;
+        font-size: 1em;
+        border: none;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        /* text-shadow: 0px 0px 2px white; */
+        transition: 0.7s;
+      }
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropstuff {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        padding: 10px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+        min-width: 60vw;
+        max-width: 70vw;
+        max-height: 40vh;
+        overflow-y: scroll;
+      }
+      .dropstuff3 {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1;
+        padding: 10px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+        min-width: 20vw;
+        max-width: 20vw;
+        max-height: 40vh;
+        overflow-y: scroll;
+      }
+      .dropstuff::-webkit-scrollbar {
+        display: none;
+      }
+      .dropbtn:hover {
+        /* background-color: #119DA4 ; */
+        text-shadow: 0px 0px 30px white;
+      }
+      .dropdown:hover .dropstuff, .dropdown:focus .dropstuff, .dropdown:active .dropstuff {
+        display: block;
+      }
+      .dropdown:hover .dropstuff3, .dropdown:focus .dropstuff3, .dropdown:active .dropstuff {
+        display: block;
+      }
+      a {
+        transition: 0.7s;
+      }
+      a:visited {
+        color: #dedede;
+      }
+      a:hover {
+        /* background-color: #119DA4; */
+        text-shadow: 0px 0px 30px white;
+        transition: 0.5s;
+      }
+      .panel, #one, #two, #three, #four {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+      }
+      #hs {
+        background-image: url('assets/imgs/hsa2.jpg');
+        background-size: 100% 100%;
+        height:250px;
+        width:250px;
+      }
+      #hs:hover {
+        background-image: url('assets/imgs/hsb.JPG');
+        background-size: 100% 100%;
+        height: 250px;
+        width: 250px;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😜</text></svg>") 16 0,auto; /*emojicursor.app*/
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas-basic"></canvas>
+    <div class="text">
+      <b>Freesoul-Kofi El Shabazz-Thompson</b>
+      <br>
+      b.1997 Elmina, Ghana
+      <br>
+      BS Manufacturing & Design Engineering from Northwestern University (fall 2019)
+      <br>
+      <br>
+      "...what definitely matters is that we know each other"
+      <br>
+
+      <!-- <div class="dropdown">
+           Freesoul-Kofi is a Brother, Explorer, Student and <button class="dropbtn">Generator</button>
+          <div class="dropstuff">
+            <i>
+              A Generator is a person who, through observation, research, and experimentation, develops specific
+              processes by which a general problem can be solved, or general need can be met.
+              To practice Generation means to give impetus to the creation and arrangment of
+              things, events or spaces that continually resolve the forces of any given system of pattern-relationships.
+              <br>
+              Activity Sectors: Art, Design, Engineering, Architecture, Sociopolitical <br>
+            </i>
+          </div>
+      </div> -->
+
+      <!-- Freesoul-Kofi is a Brother, Explorer, Student and
+      <button class="dropbtn">Generator</button>
+        <div class="panel">
+          <i><br>
+            A Generator is a person who, through observation, research, and
+            experimentation, develops specific processes by which a general
+            problem can be solved, or general need can be met. To practice
+            Generation means to give impetus to the creation and arrangment of
+            things, events or spaces that continually resolve the forces of
+            any given system of pattern-relationships.
+            <br>
+            <br>
+            Activity Sectors: Art, Design, Engineering, Architecture,
+            Sociopolitical
+          </i>
+        </div> -->
+
+      <!-- <div class="dropdown">
+        Read my <button class="dropbtn">Bio</button>
+        <div class="dropstuff">
+          <i>
+             "Yo, My name is Freesoul-Kofi. I'm a Design Engineer, Conceptual Artist and
+             Creative Director actively pursuing work in regenerative and restorative
+             design. From products and architecture to culture and history, my
+             research and work focuses on exploring and recreating our relationship
+             with nature in order to use all we have towards generating wholeness of
+             experience for all."
+          </i>
+        </div>
+      </div> -->
+      <br>
+      Read my
+      <button class="dropbtn">Bio</button>
+        <div class="panel">
+          <i><br>
+            "Hey. My name is Freesoul-Kofi. I’m a designer, engineer, and
+            artist pursuing work in regenerative design. I'm interested in
+            designs pertaining to systems, and how communities and individuals
+            can be engaged differently to iterate on those institutions,
+            structures, and products that impact their lives the most.
+          </i><br>&nbsp;
+        </div>
+      See my
+      <button class="dropbtn">Face</button>
+        <div class="panel">
+          <div id="hs">
+          </div>
+        </div>
+      This is my most recent <a href="assets/resume.pdf" target="_blank">resume</a>, <a href="assets/cv.pdf" target="_blank">cv</a>
+      <br>
+      Check out some <a href="sws.html" target="_blank">selected works</a>
+      <br>
+      Some <a href="rp.html" target="_blank">random projects</a>
+      <br>
+      <!-- <div class="dropdown">
+        and work in <button class="dropbtn">press</button>
+          <div class="dropstuff">
+            <a href="#" target="_blank">Cattle Tech</a><br>
+            <a href="https://blogs.sw.siemens.com/nx-design/northwestern-engineering-students-bring-elementary-kids-drawings-to-life/" target="_blank">NX Siemens NU Design Contest</a><br>
+            <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
+          </div>
+      </div> -->
+      And work in
+      <button class="dropbtn">press</button>
+        <div class="panel">
+          <i><br>
+          <a href="https://design.northwestern.edu/projects/profiles/cattletech.html" target="_blank">Cattle Tech</a><br>
+          <a href="https://blogs.sw.siemens.com/nx-design/northwestern-engineering-students-bring-elementary-kids-drawings-to-life/" target="_blank">NX Siemens NU Design Contest</a><br>
+          <a href="http://www.intheroughstyle.com/audio/2016/7/12/9yd5q6py1jxx4pfcmihc9vhv3wso8c" target="_blank">Bedouin</a><br>
+        </i><br>
+        </div>
+      <!-- <div class="dropdown">
+        also, some of my favorite <button class="dropbtn">reads</button>
+          <div class="dropstuff">
+            <i>
+              <a href="https://g.co/kgs/Y72G3r" target="_blank">G. Agamben - Profanations</a><br>
+              <a href="https://g.co/kgs/F7Syf4" target="_blank">C. Alexander - The Timeless Way of Building</a><br>
+              <a href="https://g.co/kgs/cazPpt" target="_blank">R. Benavides - Raising the Curtain</a> *** if you own a copy of this book please contact me.<br>
+              <a href="https://g.co/kgs/mgRFgR" target="_blank">K. Gibran - Tears and Laughter</a> <br>
+              <a href="https://g.co/kgs/JUUtpA" target="_blank">D. Millman - Way of the Peaceful Warrior</a><br>
+            </i>
+          </div>
+      </div> -->
+      Also, some of my favorite
+      <button class="dropbtn">reads</button>
+        <div class="panel">
+          <i><br>
+            <a href="https://g.co/kgs/gkoFSK" target="_blank">M. Asante - Revolutionary Pedagogy</a><br>
+            <a href="https://g.co/kgs/Y72G3r" target="_blank">G. Agamben - Profanations</a><br>
+            <a href="https://g.co/kgs/F7Syf4" target="_blank">C. Alexander - The Timeless Way of Building</a><br>
+            <a href="https://g.co/kgs/cazPpt" target="_blank">R. Benavides - Raising the Curtain</a> *** if you own a copy of this book please contact me.<br>
+            <a href="https://g.co/kgs/mgRFgR" target="_blank">K. Gibran - Tears and Laughter</a> <br>
+            <a href="https://g.co/kgs/JUUtpA" target="_blank">D. Millman - Way of the Peaceful Warrior</a><br>
+          </i>
+        </div>
+      <br>
+      <a href="https://www.instagram.com/suriphilia" target="_blank">Instagram ↗</a><br>
+      <a href="https://www.linkedin.com/in/freesoul-kofi" target="_blank">LinkedIn ↗</a><br>
+      <a href="https://www.upwork.com/o/profiles/users/~0136a529e3e4df5dc7/">UpWork ↗</a><br>
+      or send me an email: <a href="mailto:yes@freesoul.id?subject=feedback">yes@freesoul.id</a><br>
+      <br>
+      <i>All Content © Freesoul-Kofi El Shabazz-Thompson 2020</i>
+    </div>
+    <script>
+      document.addEventListener("touchstart", function() {}, true);
+    </script>
+
+    <script>
+    var acc = document.getElementsByClassName("dropbtn");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+    </script>
+    <script>
+    var granimInstance = new Granim({
+      element: '#canvas-basic',
+      direction: 'radial',
+      isPausedWhenNotInView: true,
+      states : {
+        "default-state": {
+          gradients: [
+            ['#1a4bb3', '#6bbf17'],
+            ['#6bbf17', '#1a4bb3']
+          ]
+        }
+      }
+    });
+    </script>
+
+  </body>
+  </html>
