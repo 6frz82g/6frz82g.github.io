@@ -28,10 +28,12 @@
     }
     body {
       overflow: hidden;
+      font-family: serif;
     }
     a {
       transition: 0.7s;
       text-decoration: none;
+      color: blue;
     }
     a:visited {
       color: blue;
@@ -138,9 +140,7 @@
       display: none;
     }
     .close {
-      position: fixed;
-      left: auto;
-      padding-left: 5px;
+      position: relative;
       padding-top: 5px;
       color: blue;
     }
@@ -215,7 +215,7 @@
           <button class="dropbtn"><i>Design and Engineering</i></button>
               <div class="panel">
                 <button class="openmodal myBtn">Jorejick Earth-House</button><br>
-                <button class="openmodal myBtn">2020 Pittsburgh Racial Justice Summit</button><br>
+                <button class="openmodal myBtn">Pittsburgh Racial Justice Summit</button><br>
                 <button class="openmodal myBtn">Cattle Tech</button><br>
                 <button class="openmodal myBtn">Nora the Dragon</button><br>
                 <button class="openmodal myBtn">Rel8-Ball</button><br>
@@ -228,7 +228,6 @@
 <!-- CONTENT -->
 <!-- ARTWORKS -->
           <div class="modal myModal">
-            <span class="close">close</span>
             <div class="modal-imgs">
               <img src="assets/imgs/bg2.jpg" alt="">
               <img src="assets/imgs/bg2.jpg" alt="">
@@ -237,11 +236,11 @@
               <p>
                 Fields, 2020<br><br>
                 Acrylic on canvas
+                <br><span class="close">close window</span>
               </p>
             </div>
           </div>
           <div class="modal myModal">
-            <span class="close">close</span>
             <div class="modal-imgs">
               <img src="assets/imgs/e_chair.png" alt="">
               <img src="assets/imgs/e_chair2.png" alt="">
@@ -253,6 +252,7 @@
                 The Envelope Chair, 2020 <br><br>
                 Envelopes, Steel and Aluminum Base, Filling<br>
                 24L x 18W x 24H inches, 40lbs
+                <br><span class="close">close window</span>
               </p>
             </div>
           </div>
