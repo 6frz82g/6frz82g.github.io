@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+freesoul.id
+-->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <style>
+      @font-face {
+        font-family: font1;
+        src: url(assets/f25.ttf);
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        position: relative;
+        width: 50%;
+        left: 25%;
+      }
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: white;
+      }
+      .container:hover .overlay {
+        opacity: .9;
+      }
+      .text {
+        color: black;
+        font-size: 1.2em;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: left;
+      }
+      a:visited {
+        color: blue;
+      }
+      @media screen and (max-width:1024px) {
+        .container {
+          width: 100%;
+          left: 0px;
+        }
+        .text {
+          font-size: 1.4em;
+        }
+      }
+      @media screen and (max-height:823px) {
+        .text {
+          font-size: .55em;
+        }
+      }
+      .home {
+        color: #0000EE;
+        position: fixed;
+        background: rgba(0,0,0,0);
+        top: 1%;
+        left: .5%;
+        z-index: 10;
+        font-size: 12px;
+        user-select: none;
+        overflow: hidden;
+      }
+      .home:hover {
+        transform: scale(1.1);
+        transition: all .5s;
+        -webkit-filter: brightness(110%);
+        filter: brightness(150%);
+      }
+      .home:visited {
+        color: #0000EE
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home"><a href="sws.html"><img src="assets/imgs/back.png" width="20px"></a></div>
+    <div class="container">
+      <img src="assets/imgs/balance_1.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>BALANCE</b> 2018<br><br>
+          "subtle bodies being in suspense"<br><br>
+          Materials:<br>
+          balloons x3<br>
+          string<br>
+          hammer and chisel<br>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/untitled_wNL_3.JPG" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Untitled</b> 2019<br><br>
+          In collaboration with <u>Nelly Lin</u><br>
+          Loss of Privacy as an Emergent Horizon<br><br>
+
+          <a href="assets/dl/Untitled.txt" title="download" target="_blank">text</a><br>
+          <a href="assets/imgs/u1.JPG" target="_blank"> alt 1</a>
+          <a href="assets/imgs/u2.JPG" target="_blank">alt 2</a>
+          <a href="assets/imgs/u3.JPG" target="_blank">alt 2.1</a>
+          <br><br>
+          Materials:<br>
+          androgynous mannequin<br>
+          projector<br>
+          computer + software<br>
+          security camera + router<br>
+          tripod<br>
+          concealed microphone + speaker<br>
+          extruded aluminum structural materials<br>
+          mirror panes<br>
+          polycarbonate panes<br>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/imgs/e_chair.png" alt="" class="image">
+      <div class="overlay">
+        <div class="text">
+          <b>Envelope Chair</b> 2020<br><br>
+          <a href="http://bit.ly/envelope_chair" target="_blank">amazon</a><br>
+          <a href="assets/imgs/e_chair4.jpg" target="_blank">delivery</a><br>
+          <a href="assets/imgs/e_chair2.png" target="_blank">alt 1</a>
+          <a href="assets/imgs/e_chair3.png" target="_blank">alt 2</a>
+          <br><br>
+          Citations:<br><br>
+          “The ladder, It(‘s )self, Envelop(e) Its( )self, Is too the Foundation”<br>
+          <br>
+          "Lies Are Often Complex, Truth Is Often Simple"
+
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("touchstart", function() {}, true);
+    </script>
+  </body>
+  </html>

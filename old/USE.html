@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+freesoul.id
+-->
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <style>
+      body {
+        overflow: hidden;
+        cursor: crosshair;
+        font-family: Arial, sans-serif;
+      }
+      .diy-slideshow img {
+        width: 60vw;
+        overflow: hidden;
+      }
+      .diy-slideshow{
+        position: relative;
+        display: block;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+      figure{
+        position: absolute;
+        opacity: 0;
+        transition: 1s opacity;
+        overflow: hidden;
+      }
+      figcaption{
+        position: relative;
+        font-family: serif;
+        font-size: .8em;
+        color: #000;
+        padding-top: 5vh;
+        text-align: center;
+        overflow: hidden;
+      }
+      figure.show{
+        opacity: 1;
+        position: static;
+        transition: 1s opacity;
+        overflow: hidden;
+      }
+      .next, .prev{
+        color: #0000EE;
+        position: absolute;
+        background: rgba(0,0,0,0);
+        top: 50%;
+        z-index: 1;
+        font-size: 24px;
+        margin-top: -.75em;
+
+        user-select: none;
+        overflow: hidden;
+      }
+      .next:hover, .prev:hover{
+        cursor: pointer;
+        opacity: 1;
+      }
+      .next{
+        right: 0;
+        padding: 10px 5px 15px 10px;
+      }
+      .prev{
+        left: 0;
+        padding: 10px 10px 15px 5px;
+      }
+      .home {
+        color: #0000EE;
+        position: fixed;
+        background: rgba(0,0,0,0);
+        top: 1%;
+        left: .5%;
+        z-index: 10;
+        user-select: none;
+        overflow: hidden;
+      }
+      .home:hover {
+        transform: scale(1.1);
+        transition: all .5s;
+        -webkit-filter: brightness(110%);
+        filter: brightness(150%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home"><a href="sws.html"><img src="assets/imgs/back.png" width="20px"></a></div>
+    <div class="diy-slideshow">
+      <figure class="show">
+        <img src="assets/imgs/use_p1.png"/>
+        <figcaption></figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/imgs/use_p2.png"/>
+        <figcaption></figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/imgs/use_p3.png"/>
+        <figcaption></figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/imgs/use_p4.png"/>
+        <figcaption></figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/imgs/use_p5.png"/>
+        <figcaption></figcaption>
+      </figure>
+
+      <span class="prev">&#9756;	</span>
+      <span class="next">&#9758;	</span>
+    </div>
+  <!-- lil bit o' JS -->
+  <script>
+  (function(){
+
+    var counter = 0, // to keep track of current slide
+    $items = document.querySelectorAll('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+    numItems = $items.length; // total number of slides
+
+    // this function is what cycles the slides, showing the next or previous slide and hiding all the others
+    var showCurrent = function(){
+      var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show
+
+      // remove .show from whichever element currently has it
+      // http://stackoverflow.com/a/16053538/2006057
+      [].forEach.call( $items, function(el){
+        el.classList.remove('show');
+      });
+
+      // add .show to the one item that's supposed to have it
+      $items[itemToShow].classList.add('show');
+    };
+
+    // add click events to prev & next buttons
+    document.querySelector('.next').addEventListener('click', function() {
+      counter++;
+      showCurrent();
+    }, false);
+
+    document.querySelector('.prev').addEventListener('click', function() {
+      counter--;
+      showCurrent();
+    }, false);
+
+  })();
+  </script>
+  <!-- lil bit o' JS -->
+</body>
+</html>
