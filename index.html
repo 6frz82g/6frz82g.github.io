@@ -24,6 +24,7 @@
     <script src="jquery-3.5.1.min.js"></script> -->
 
     <style media="screen">
+
       @font-face {
         font-family: sf;
         src: url(assets/SF-Pro-Display-Regular.otf);
@@ -38,12 +39,31 @@
         src: url(assets/HelveticaNeue-Light.otf);
       }
 
+      html::-webkit-scrollbar {
+        width: 10px;
+      }
+      html::-webkit-scrollbar-track {
+        background: rgb(179, 177, 177);
+        border-radius: 10px;
+      }
+      html::-webkit-scrollbar-thumb {
+        background: rgb(136, 136, 136);
+        border-radius: 10px;
+      }
+      html::-webkit-scrollbar-thumb:hover {
+        background: rgb(100, 100, 100);
+        border-radius: 10px;
+      }
+      html::-webkit-scrollbar-thumb:active {
+        background: rgb(68, 68, 68);
+        border-radius: 10px;
+      }
+
       body {
         position: relative;
         background-color: #e5e5e5;
         color: #000;
       }
-
       #one {
         position: relative;
         /* border-style: solid;
@@ -51,13 +71,17 @@
         min-width: 500px;
         min-height: 50%;
         padding-right: 1.5em;
+        padding-top: .5em;
         display: flex;
         flex-wrap: wrap;
-        margin-top: .5em;
+        /* margin-top: .5em; */
         font-family: hnl;
         font-weight: normal;
         font-style: normal;
         font-size: 1.2em;
+        background-color: #e5e5e5;
+        z-index: 2;
+        box-shadow: -2px 0px 6px grey;
       }
       #two {
         position: relative;
@@ -68,12 +92,19 @@
         /* padding-right: 1.5em;
         margin-top: .5em; */
         background-color: #c4c4c4;
-        box-shadow: -2px 0px 6px grey;
-
+        font-family: hnl;
+        font-weight: normal;
+        font-style: normal;
+        z-index: 1;
+      }
+      .work {
+        position: relative;
+        padding-right: 1.5em;
+        margin-top: .5em;
+        z-index: -10;
       }
       #current {
         position: relative;
-
       }
       #squares {
         display: flex;
@@ -82,7 +113,6 @@
         margin-top: 0px;
         /* margin: 10px;
         flex: 1 1 calc(33.33% - 20px); */
-
       }
       /* Bootstrap Amendments */
       .row {
@@ -110,31 +140,11 @@
         /* background-color: #d3d5d4; */
         color: #000;
       }
-      /* .list-group {
-        display: flex;
-        flex-wrap: wrap;
-        border-width: 0;
+      #down {
+        position: absolute;
+        overflow: visible;
+        /* visibility: hidden; */
       }
-      .list-group-horizontal .list-group-item {
-        display: inline-block;
-	      margin-left:-4px;
-	      margin-right: 0;
- 	      border-right-width: 0;
-      }
-      .list-group-item {
-        padding-left: 0;
-      }
-      .list-group-item-action {
-        color: white;
-        border-width: 0;
-        width: 1%;
-      }
-      .list-group-item-action:focus, .list-group-item-action:hover {
-        background-color: #fff;
-      }
-      .list-group-horizontal>.list-group-item+.list-group-item {
-        border-top-width: 0px;
-      } */
       /* Media Screens */
       @media screen and (max-width:987px) {
         .row {
@@ -143,22 +153,163 @@
         }
         #one {
           min-width: 100%;
-          max-height: 30vh;
-          margin-top: .5em;
+          max-height: 25vh;
+          overflow: scroll;
           overflow-y: scroll;
+          scroll-behavior: smooth;
+          z-index: 99;
+          box-shadow: -5px -1px 10px grey;
         }
         #two {
           min-width: 100%;
           background-color: #c4c4c4;
-          box-shadow: -5px -1px 10px grey;
+          z-index: -99;
+          overflow: scroll;
+          overflow-y: scroll;
+        }
+        #down {
+          visibility: visible;
+          position: fixed;
+          overflow: visible;
         }
       }
+
+      .bubbles {
+        position: static;
+        z-index: -99;
+      }
+      .bubble {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: #e5e5e5;
+        border-radius: 200px;
+        -moz-border-radius: 200px;
+        -webkit-border-radius: 200px;
+      }
+      .x1 {
+        top: 200px;
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        transform: scale(0.9);
+        opacity: 0.2;
+        -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+      }
+      .x2 {
+        left: 200px;
+        top: 50px;
+        -webkit-transform: scale(0.6);
+        -moz-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 0.5;
+        -webkit-animation: moveclouds 21s linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 21s linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -o-animation: moveclouds 21s linear infinite, sideWays 5s ease-in-out infinite alternate;
+      }
+      .x3 {
+        left: 450px;
+        top: 150px;
+        -webkit-transform: scale(0.6);
+        -moz-transform: scale(0.6);
+        transform: scale(0.6);
+        opacity: 0.3;
+        -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+        -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+      }
+      .x4 {
+        left: 700px;
+        top: 300px;
+        -webkit-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        transform: scale(0.75);
+        opacity: 0.35;
+        -webkit-animation: moveclouds 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+        -o-animation: moveclouds 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+      }
+      .x5 {
+        left: 400px;
+        top: 75px;
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0.3;
+        -webkit-animation: moveclouds 14s linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 14 linear infinite, sideWays 5s ease-in-out infinite alternate;
+        -o-animation: moveclouds 14s linear infinite, sideWays 5s ease-in-out infinite alternate;
+      }
+      .x6 {
+        left: 100px;
+        top: 180px;
+        -webkit-transform: scale(0.75);
+        -moz-transform: scale(0.75);
+        transform: scale(0.75);
+        opacity: 0.35;
+        -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+        -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+        -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes moveclouds {
+        0% {
+            top: 120%;
+        }
+        100% {
+            top: -100%;
+        }
+      }
+      @-webkit-keyframes sideWays {
+        0% {
+            margin-left:0px;
+        }
+        100% {
+            margin-left:50px;
+        }
+      }
+      @-moz-keyframes moveclouds {
+        0% {
+            top: 120%;
+        }
+
+        100% {
+            top: -100%;
+        }
+      }
+      @-moz-keyframes sideWays {
+        0% {
+            margin-left:0px;
+        }
+        100% {
+            margin-left:50px;
+        }
+      }
+      @-o-keyframes moveclouds {
+        0% {
+            top: 120%;
+        }
+        100% {
+            top: -100%;
+        }
+      }
+      @-o-keyframes sideWays {
+        0% {
+            margin-left:0px;
+        }
+        100% {
+            margin-left:50px;
+        }
+      }
+
     </style>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col" id="one">
+          <svg id="down" width="100vw" height="100vh"><circle cx="0" cy="0" r="80" fill= "yellow" /></svg>
           <p id="current">
             <b>Freesoul El Shabazz-Thompson (he/him) is a designer, researcher, and artist
             exploring communal creation and control of technologies.
@@ -167,7 +318,7 @@
             He can be reached via email at <a href="mailto:yes@solify.me?subject=feedback">yes</a><a href="index.html">@solify.me</a>.
             He is currently researching and designing with the <a href="http://coalalab.com/" target="_blank" rel="noopener noreferrer">CoALA Lab</a><a href="https://hcii.cmu.edu/" target="_blank" rel="noopener noreferrer">@cmu</a>,
             and guiding artists in studio during <a href="https://www.are.na/art-making-and-anti-racism-fall-2021" target="_blank" rel="noopener noreferrer">AMX</a><a href="https://design.northwestern.edu/" target="_blank">@nu</a>.
-            He is stopping to smell the roses, and marching to the beat of his own drum.<br>
+            <br>
             <a href="mailto:yes@solify.me" rel="noopener noreferrer">Email</a>,
             <a href="https://www.are.na/freesoul-el-shabazz-9cde5lr1pmo" target="_blank" rel="noopener noreferrer">Are.na</a>,
             <a href="https://freesoul.bandcamp.com/" target="_blank" rel="noopener noreferrer">Bandcamp</a>,
@@ -261,11 +412,19 @@
            </button>
          </div> -->
         </div>
-
         <div class="col" id="two">
+          <div class="bubbles">
+            <div class="bubble x1"></div>
+            <div class="bubble x2"></div>
+            <div class="bubble x3"></div>
+            <div class="bubble x4"></div>
+            <div class="bubble x5"></div>
+            <div class="bubble x6"></div>
+          </div>
+          <div class="work">
+          </div>
 
         </div>
-
       </div>
     </div>
   </body>
