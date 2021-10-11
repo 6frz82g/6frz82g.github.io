@@ -61,15 +61,17 @@
 
       body {
         position: relative;
-        background-color: #e5e5e5;
         color: #000;
       }
       #one {
         position: relative;
         /* border-style: solid;
         border-color: red; */
-        min-width: 500px;
+        max-width: 25vw;
         min-height: 50%;
+        /* max-height: 25vh;
+        overflow-y: scroll;
+        overflow-x: hidden; */
         padding-right: 1.5em;
         padding-top: .5em;
         display: flex;
@@ -85,10 +87,11 @@
       }
       #two {
         position: relative;
+        display: inline-block;
         /* border-style: solid;
         border-color: blue; */
-        min-width: 500px;
         min-height: 100vh;
+        width: 75vw;
         /* padding-right: 1.5em;
         margin-top: .5em; */
         background-color: #c4c4c4;
@@ -118,7 +121,7 @@
       .row {
         position: fixed;
       }
-      .btn-group {
+      /* .btn-group {
         background-color: #e5e5e5;
         border: none;
         padding-right: 1em;
@@ -127,7 +130,7 @@
         padding-left: 0px;
         margin-left: 0px;
         color: transparent;
-      }
+      } */
       a {
         color: #000;
       }
@@ -141,7 +144,7 @@
         color: #000;
       }
       #down {
-        position: absolute;
+        position: fixed;
         overflow: visible;
         /* visibility: hidden; */
       }
@@ -152,16 +155,15 @@
           top: 0px;
         }
         #one {
-          min-width: 100%;
+          min-width: 100vw;
           max-height: 25vh;
-          overflow: scroll;
           overflow-y: scroll;
           scroll-behavior: smooth;
           z-index: 99;
           box-shadow: -5px -1px 10px grey;
         }
         #two {
-          min-width: 100%;
+          min-width: 75vw;
           background-color: #c4c4c4;
           z-index: -99;
           overflow: scroll;
@@ -422,8 +424,8 @@
             <div class="bubble x6"></div>
           </div>
           <div class="work">
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
