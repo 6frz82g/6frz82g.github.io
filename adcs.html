@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        position: fixed;
+      }
+      div {
+        position: absolute;
+        top: 0;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #div1 {
+        width: 2%;
+      }
+      #div2 {
+        top: 20px;
+        width: 15%;
+      }
+      #div3 {
+        top: 70px;
+        width: 15%;
+      }
+      #div4 {
+        top: 120px;
+        width: 15%;
+      }
+      #div5 {
+        top: 190px;
+        width: 15%;
+      }
+      #div6 {
+        top: 250px;
+        width: 15%;
+      }
+      #div7 {
+        top: 450px;
+        width: 15%;
+      }
+      #twitch-embed {
+        position: relative;
+        margin: 10px;
+        left: 25%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element. -->
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: "50%",
+        height: 480,
+        channel: "adcs_livestreamdesign",
+        layout: "video",
+        autoplay: false,
+        // Only needed if this page is going to be embedded on other websites
+        // parent: ["embed.example.com", "othersite.example.com"]
+      });
+
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+    <canvas id="canvas" class="canvas"></canvas>
+
+        <img id="div1" src="./tag.png" alt="">
+        <img id="div2" src="./comment.png" alt="">
+        <img id="div3" src="./query-direct.png" alt="">
+        <img id="div4" src="./query-vote.png" alt="">
+        <img id="div5" src="./query-rate.png" alt="">
+        <img id="div6" src="./upload-image.png" alt="">
+        <img id="div7" src="./upload-recording.png" alt="">
+
+        <script>
+            divs = document.getElementsByTagName("img");
+            for (div of divs) div.onmousedown = onMouseDown;
+
+            document.onmousemove = onMouseMove;
+            document.onmouseup   = onMouseUp;
+
+            canvas.width = window.innerWidth - 20;
+            canvas.height = window.innerHeight - 20;
+
+            var the_moving_div = '';
+            var the_last_mouse_position = { x:0, y:0 };
+
+            // drawConnectors();
+
+            function onMouseDown(e) {
+                e.preventDefault();
+                the_moving_div            = e.target.id;      // remember which div has been selected
+                the_last_mouse_position.x = e.clientX;        // remember where the mouse was when it was clicked
+                the_last_mouse_position.y = e.clientY;
+                e.target.style.border = "2px solid blue";     // highlight the border of the div
+
+                var divs = document.getElementsByTagName("div");
+                e.target.style.zIndex = divs.length;          // put this div  on top
+                var i = 1; for (div of divs) if (div.id != the_moving_div) div.style.zIndex = i++;   // put all other divs behind the selected one
+            }
+
+            function onMouseMove(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                var d = document.getElementById(the_moving_div);
+                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px";     // move the div by however much the mouse moved
+                d.style.top  = d.offsetTop  + e.clientY - the_last_mouse_position.y + "px";
+                the_last_mouse_position.x = e.clientX;                                          // remember where the mouse is now
+                the_last_mouse_position.y = e.clientY;
+                drawConnectors();
+            }
+
+            function onMouseUp(e) {
+                e.preventDefault();
+                if (the_moving_div == "") return;
+                document.getElementById(the_moving_div).style.border = "none";             // hide the border again
+                the_moving_div = "";
+            }
+
+            // function drawConnectors() {
+            //     var canvas = document.getElementById('canvas');
+            //     var ctx = canvas.getContext('2d');
+            //     ctx.clearRect(0,0,canvas.width,canvas.height);
+            //     ctx.beginPath();
+            //     ctx.strokeStyle="#15a5ed";
+            //     ctx.lineWidth=3;
+            //     for (div1 of divs) for (div2 of divs) {
+            //         if (div1 == div2) continue;
+            //         ctx.moveTo(div1.offsetLeft + div1.clientWidth/2, div1.offsetTop + div1.clientHeight/2);
+            //         ctx.bezierCurveTo(div1.offsetLeft, div1.offsetTop,
+            //                           div2.offsetLeft, div2.offsetTop,
+            //                           div2.offsetLeft + div2.clientWidth/2, div2.offsetTop + div2.clientHeight/2);
+            //         ctx.stroke();
+            //     }
+            // }
+        </script>
+
+  </body>
+</html>
